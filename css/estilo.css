@@ -1,0 +1,93 @@
+/* Layout */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #363636;
+  /* Usamos flexbox y unidades relativas para fijar el footer siempre al pie de la página. */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+/* Esta clase solo sirve para dar un ancho máximo al contenido de cada región, sin que este código esté repetido en muchos elementos. Si lo pusieramos al principio de la región, no se aplicarían los colores de fondo que queremos que ocupen siempre el 100% de la página. */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+header {
+  background-color: #ffffff;
+  border-bottom: 3px solid #ED9636;
+}
+header h1 {
+  margin: 0;
+}
+.site-info {
+}
+.main-nav {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+}
+
+.site-title a {
+  display: block;
+  background: url("../images/logo.png") center no-repeat;
+  text-indent: -9999px;
+  background-size: 159px;
+  height: 100px;
+  width: 159px;
+}
+
+.site-content {
+  flex: 1;
+  margin-bottom: 3rem;
+}
+
+footer {
+  background-color: #363636;
+  color: white;
+  font-size: 0.8rem;
+}
+footer a {
+  color: white;
+}
+
+/* Basic styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ED9636;
+}
+a {
+  color: #ED9636;
+}
+
+/* Styles for the content */
+/* Main menu */
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.main-nav li {
+  list-style-type: none;
+  display: inline-block;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.main-nav li:not(:last-child):after {
+  content: '|';
+  margin-left: 3px;
+  color: #ED9636;
+}
+.main-nav a {
+  color: #363636;
+  text-decoration: none;
+}
+.main-nav a:hover {
+  color: #ED9636;
+}
